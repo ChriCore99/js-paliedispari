@@ -21,10 +21,27 @@ console.log(arrayInverso);
 
 // creare una funzione per vedere se la parola inserita è palindroma
 
-function palindromo(){
+function palindromo(array, arrayInverso){
+    let risultato;
+    //  ottenere come ritorno true se è palindroma e false se non lo è 
+    for(let i = 0; i < array.length; i++){
 
+        if(array[i] === arrayInverso[i]){
+            risultato = true;
+        } else {
+            risultato = false;
+        }
+    }
+
+    // stamapre in console un messaggio per avvisare se è palindorma o no 
+    if(risultato === true){
+        console.log('la parola è palindroma, true');
+    } else {
+        console.log('la parla non è palindroma, false');
+    }
+
+    return risultato;
 }
 
-//  ottenere come ritorno true se è palindroma e false se non lo è 
+const rispostaFinale = palindromo(array, arrayInverso);
 
-// stamapre in console un messaggio per avvisare se è palindorma o no 
